@@ -52,6 +52,5 @@ const savedTodos = localStorage.getItem(TODOS_KEY);
 if (savedTodos !== null) {
     const parsedTodos = JSON.parse(savedTodos);
     todos = parsedTodos;
-    console.log(todos);
     parsedTodos.forEach(paintTodo);
 }

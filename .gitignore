@@ -1,0 +1,18 @@
+# .gitignore
+
+# node_modules 폴더 무시
+node_modules/
+
+# 빌드 결과물(프론트엔드, 백엔드 등)
+dist/
+build/
+
+# 로그 파일
+*.log
+npm-debug.log*
+
+# macOS에서 생기는 불필요 파일
+.DS_Store
+
+# Windows에서 생길 수 있는 불필요 파일
+Thumbs.db

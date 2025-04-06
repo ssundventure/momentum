@@ -1,14 +1,11 @@
-.hidden {
-  display: none;
-}
-
+/* 레이아웃 관련 스타일 */
 body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: beige;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  color: #fff;
+  letter-spacing: -2.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 body > img {
@@ -21,59 +18,132 @@ body > img {
   z-index: -1;
 }
 
-.header {
+header {
+  grid-row: 1;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
-.main,
-.footer {
+main {
+  grid-row: 2;
+  margin-top: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+footer {
+  grid-row: 3;
+  margin: auto;
+}
+
+/* 컴포넌트별 스타일 */
+
 #weather {
-  color: #fff;
   font-size: 30px;
 }
 
 #clock {
-  font-size: 128px;
-  color: #fff;
+  font-weight: 600;
+  font-size: 150px;
+  margin-bottom: -80px;
 }
 
 #greeting {
-  color: #fff;
-  font-size: 75px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 #quote {
-  color: #fff;
   font-size: 24px;
 }
 
-.todo-form-label{
-  color: #fff;
-  font-size: 40px;
+/*today goal*/
+#goal {
 }
 
-.todo-input{
+#goal-form {
+  text-align: center;
+}
+
+.goal-form-label {
+  font-size: 32px;
+  margin-bottom: -1px;
+}
+
+.goal-input {
+  color: #fff;
+  font-size: 32px;
   width: 400px;
   background: 0;
   border: 0;
   border-bottom: 2px solid #fff;
-  color: #fff;
   font-weight: 500;
   line-height: 1.2;
   outline: none;
   text-align: center;
-  transition: border-color .2s ease;
-  font-size: 40px;
+  transition: border-color 0.2s ease;
+}
+
+.goal-label {
+  font-size: 26px;
+}
+
+#goal-print-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-goal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 20%;
+}
+
+#main-goal {
+  font-size: 36px;
+  white-space: nowrap;
+}
+
+/*todo*/
+#todo {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-form-label {
+  margin-bottom: -1px;
+}
+
+.todo-input {
+  color: #fff;
+  font-size: 32px;
+  width: 400px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  font-weight: 500;
+  line-height: 1.2;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.2s ease;
 }
 
 ul > li {
-  color: #fff;
   list-style: none;
   font-size: 28px;
 }
@@ -81,4 +151,12 @@ ul > li {
 ul > li > button {
   background: 0;
   border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.cancel-line {
+  text-decoration: line-through;
 }

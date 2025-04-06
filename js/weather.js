@@ -15,7 +15,8 @@ function onGeoSuccess(position) {
         });
 }
 
-function onGeoError() {
+function onGeoError(error) {
+    console.log(error);
     alert("Can't find you. No weather for you.");
 }
 

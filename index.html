@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
   </head>
@@ -31,21 +34,21 @@
       </section>
 
       <section id="goal">
+        <!--goal-form-->
         <section id="goal-form-wrapper">
           <h3 class="goal-form-label">What is your main goal for today?</h3>
           <form id="goal-form">
             <input class="goal-input" type="text" required />
           </form>
         </section>
+        <!--goal-display-->
+        <section id="goal-display-wrapper" class="hidden">
+          <h3 class="goal-display-label">TODAY</h3>
 
-        <section id="goal-print-wrapper" class="hidden">
-          <h3 class="goal-label">TODAY</h3>
-
-          <div id="main-goal-wrapper">
-            <div class="checkbox">
+          <div id="goal-display-container">
+            <div id="goal-checkbox">
               <svg
-                id="checked"
-                class="hidden"
+                class="hidden checked-icon"
                 data-slot="icon"
                 fill="none"
                 stroke-width="5"
@@ -61,7 +64,18 @@
                 ></path>
               </svg>
             </div>
-            <div id="main-goal"></div>
+            <div id="goal-display-text"></div>
+            <div id="goal-option">
+              <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"></path>
+              </svg>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                ></path>
+              </svg>
+            </div>
           </div>
         </section>
       </section>
@@ -88,7 +102,7 @@
     <script type="module" src="js/clock.js"></script>
     <script type="module" src="js/quotes.js"></script>
     <script type="module" src="js/background.js"></script>
-    <script type="module" src="js/todo.js"></script>
+    <!-- <script type="module" src="js/todo.js"></script> -->
     <script type="module" src="js/goal.js"></script>
     <script type="module" src="js/weather.js"></script>
   </body>

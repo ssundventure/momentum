@@ -5,10 +5,10 @@ body {
   grid-template-rows: 1fr 8fr 1fr;
   color: #fff;
   letter-spacing: -2.5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 body > img {
+  filter: brightness(80%);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -60,12 +60,15 @@ footer {
   font-size: 24px;
 }
 
-/*today goal*/
-#goal {
-}
-
+/* goal*/
 #goal-form {
   text-align: center;
+}
+#goal-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .goal-form-label {
@@ -87,31 +90,48 @@ footer {
   transition: border-color 0.2s ease;
 }
 
-.goal-label {
+.goal-form-label {
   font-size: 26px;
 }
 
-#goal-print-wrapper {
+#goal-display-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-#main-goal-wrapper {
+#goal-display-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.checkbox {
-  width: 15px;
-  height: 15px;
+#goal-checkbox {
+  width: 20px;
+  height: 20px;
   border: 3px solid #fff;
   border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-#main-goal {
+#goal-option {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#goal-option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+#goal-checkbox:hover {
+  cursor: pointer;
+}
+
+#goal-display-text {
   font-size: 36px;
   white-space: nowrap;
 }
@@ -154,7 +174,7 @@ ul > li > button {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .cancel-line {

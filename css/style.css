@@ -4,7 +4,8 @@ body {
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
   color: #fff;
-  letter-spacing: -2.5px;
+  --font-default: -apple-system, BlinkMacSystemFont,
+    "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 body > img {
@@ -116,17 +117,6 @@ footer {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#goal-option {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-}
-
-#goal-option:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-}
-
 #goal-checkbox:hover {
   cursor: pointer;
 }
@@ -134,6 +124,55 @@ footer {
 #goal-display-text {
   font-size: 36px;
   white-space: nowrap;
+}
+
+#goal-dropdown-wrapper {
+  position: relative;
+}
+
+#goal-dropdown-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+#goal-dropdown {
+  width: 150px;
+  height: 70px;
+  padding: 0px;
+  position: absolute;
+  top: 30px;
+  left: -14px;
+}
+
+#goal-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+
+  /*삼각형 화살표*/
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.85);
+}
+#goal-dropdown > ul {
+  padding: 5px 0px 3px 0px;
+}
+#goal-dropdown > ul.dropdown-list > li{
+  padding: 5px 0px 5px 10px;
+}
+#goal-dropdown > ul.dropdown-list > li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+
+#goal-dropdown > ul.dropdown-list > li > svg {
+  padding-right: 5px;
+  width: 10px;
+  height: 10px;
 }
 
 /*todo*/
@@ -163,15 +202,7 @@ footer {
   transition: border-color 0.2s ease;
 }
 
-ul > li {
-  list-style: none;
-  font-size: 28px;
-}
-
-ul > li > button {
-  background: 0;
-  border: 0;
-}
+/* 재사용 클래스*/
 
 .hidden {
   display: none !important;
@@ -179,4 +210,40 @@ ul > li > button {
 
 .cancel-line {
   text-decoration: line-through;
+}
+
+/* 공통 스타일 */
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+ul > li {
+  list-style: none;
+}
+
+/* 컴포넌트 */
+div > .dropdown-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-toggle-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.dropdown {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px 15px;
 }

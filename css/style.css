@@ -4,8 +4,8 @@ body {
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
   color: #fff;
-  --font-default: -apple-system, BlinkMacSystemFont,
-    "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body > img {
@@ -42,14 +42,34 @@ footer {
 
 /* 컴포넌트별 스타일 */
 
-#weather {
-  font-size: 30px;
+/*weather*/
+#weather:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#weather-state {
+  display: flex;
+  align-items: center;
+}
+
+#weather-icon {
+ 
+}
+
+#weather-temperature {
+  font-size: 22px;
+}
+
+#weather-region {
+  text-align: center;
 }
 
 #clock {
-  font-weight: 600;
-  font-size: 150px;
-  margin-bottom: -80px;
+  font-weight: 500;
+  font-size: 160px;
+  margin-bottom: -60px;
 }
 
 #greeting {
@@ -58,13 +78,14 @@ footer {
 }
 
 #quote {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /* goal*/
 #goal-form {
   text-align: center;
 }
+
 #goal-form-wrapper {
   display: flex;
   flex-direction: column;
@@ -73,11 +94,11 @@ footer {
 }
 
 .goal-form-label {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: -1px;
 }
 
-.goal-input {
+.goal-input, .login-input {
   color: #fff;
   font-size: 32px;
   width: 400px;
@@ -89,10 +110,6 @@ footer {
   outline: none;
   text-align: center;
   transition: border-color 0.2s ease;
-}
-
-.goal-form-label {
-  font-size: 26px;
 }
 
 #goal-display-wrapper {
@@ -160,14 +177,13 @@ footer {
 #goal-dropdown > ul {
   padding: 5px 0px 3px 0px;
 }
-#goal-dropdown > ul.dropdown-list > li{
+#goal-dropdown > ul.dropdown-list > li {
   padding: 5px 0px 5px 10px;
 }
 #goal-dropdown > ul.dropdown-list > li:hover {
   background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
-
 
 #goal-dropdown > ul.dropdown-list > li > svg {
   padding-right: 5px;

@@ -11,26 +11,24 @@
   </head>
   <body>
     <header>
-      <section id="weather">
-        <span></span>
-        <span></span>
+      <section id="weather" class="hidden">
+        <div id="weather-state">
+          <div id="weather-icon"></div>
+          <div id="weather-temperature"></div>
+        </div>
+        <div id="weather-region"></div>
       </section>
     </header>
     <main>
-      <section id="login">
-        <form id="login-form" class="hidden">
-          <input
-            required
-            maxlength="15"
-            type="text"
-            placeholder="What is your name?"
-          />
-          <input type="submit" value="Log In" />
-        </form>
-      </section>
       <section id="clock">00:00</section>
       <section id="greeting">
         <h1 class="hidden" id="greeting-text"></h1>
+      </section>
+      <section id="login">
+        <form id="login-form" class="hidden">
+          <input class="login-input" required maxlength="15" type="text" />
+        </form>
+        <p>Please enter your first name or name you prefer to be called</p>
       </section>
 
       <section id="goal">
@@ -165,12 +163,12 @@
         "
       </section>
     </footer>
-    <script type="module" src="js/greetings.js"></script>
     <script type="module" src="js/clock.js"></script>
     <script type="module" src="js/quotes.js"></script>
     <script type="module" src="js/background.js"></script>
     <!-- <script type="module" src="js/todo.js"></script> -->
-    <script type="module" src="js/goal.js"></script>
+    <script type="module" src="js/goal.js"></script>   
+    <script type="module" src="js/greetings.js"></script>
     <script type="module" src="js/weather.js"></script>
   </body>
 </html>
